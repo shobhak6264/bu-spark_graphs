@@ -1,6 +1,6 @@
 function generateData(dummy_data,categories,graphData) {
     let i=0;let j=0;
-    for(i=1;i<Object. keys(dummy_data).length;i++)
+    for(i=1;i<Object.keys(dummy_data).length;i++)
     {
       if(typeof dummy_data[i] === 'object')
       {

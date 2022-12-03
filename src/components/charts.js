@@ -5,11 +5,12 @@ import generateData from './generateData';
 import { dummy_data } from '../data/data1';
 
 export const LineChart = () => {
-  let graphData = [0];
+  let graphData = [];
   let categories = [];
   generateData(dummy_data,categories,graphData);
 
   const [chartOptions, setChartOptions] = useState({
+    title: {text : "Museums Go Forward"},
     xAxis: {
       categories: categories,
     },
@@ -28,7 +29,6 @@ export const LineChart = () => {
       }
     }
   });
-
   return (
      <div class="container">
       <h1 className="header">DATA VISUALIZATION</h1>

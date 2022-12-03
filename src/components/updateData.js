@@ -1,4 +1,4 @@
-export const getdata = (dummy_data,graphData,categories,setChartOptions) => {
+export const updateData = (dummy_data,graphData,categories,setChartOptions) => {
     let i=1;let j=1;
     console.log(Object.keys(dummy_data[3][1]));
     for(i=1;i<=Object. keys(dummy_data).length;i++)
