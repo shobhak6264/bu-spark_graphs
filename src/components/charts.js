@@ -8,7 +8,11 @@ import { renderGraphs } from './dynamicdata';
 export const LineChart = () => {
   let graphData = [];
   let categories = [];
-  generateData(dummy_data,categories,graphData);
+  let k=1;
+  generateData(dummy_data,categories,graphData,k);
+  k++;
+  // renderGraphs(dummy_data,categories,graphData)
+  console.log("categories",categories,"GraphData",graphData);
   const [chartOptions, setChartOptions] = useState({
     title: {text : "Museums Go Forward"},
     xAxis: {
