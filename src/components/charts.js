@@ -4,50 +4,75 @@ import Highcharts from 'highcharts';
 import generateData from './generateData';
 import { dummy_data } from '../data/data1';
 import { renderGraphs } from './dynamicdata';
-
+import { objectData , arrayData } from './dataHandle';
 export const LineChart = () => {
   let graphData = [];
   let categories = [];
-  let k=1;
-  generateData(dummy_data,categories,graphData,k);
-  k++;
   // renderGraphs(dummy_data,categories,graphData)
-  console.log("categories",categories,"GraphData",graphData);
-  const [chartOptions, setChartOptions] = useState({
-    title: {text : "Museums Go Forward"},
-    xAxis: {
-      categories: categories,
-    },
-    series: [
-      { data: graphData }
-    ],
-    plotOptions: {
-      series: {
-        point: {
-          events: {
-            mouseOver(e){
-              // setHoverData(e.target.category)
-            }
-          }
-        }
-      }
-    }
-  });
+  // console.log("categories",categories,"GraphData",graphData);
+  // const [chartOptions, setChartOptions] = useState({
+  //   title: {text : "Museums Go Forward"},
+  //   xAxis: {
+  //     categories: categories,
+  //   },
+  //   series: [
+  //     { data: graphData }
+  //   ],
+  //   plotOptions: {
+  //     series: {
+  //       point: {
+  //         events: {
+  //           mouseOver(e){
+  //             // setHoverData(e.target.category)
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+    
+  // });
   return (
     <div class="container">
       <h1 className="header">DATA VISUALIZATION</h1>
        <div className="graph-display">
-       {graphData.map((data, index) => {
+       {dummy_data.map((data, index) => {
+         graphData=[];categories=[];
+         typeof data === 'object' ? objectData(data,graphData,categories) : arrayData(data,graphData,categories,index)
+         console.log("GraphData",graphData , "Categories",categories) 
+         //  generateData(dummy_data,categories,graphData,setChartOptions);
           return (
             <>
                <HighchartsReact
                 highcharts={Highcharts}
-                options={chartOptions}
+                options={{
+                  title: {text : "Museums Go Forward"},
+                  xAxis: {
+                    categories: categories,
+                  },
+                  series: [
+                    { data: graphData }
+                  ],
+                  plotOptions: {
+                    series: {
+                      point: {
+                        events: {
+                          mouseOver(e){
+                            // setHoverData(e.target.category)
+                          }
+                        }
+                      }
+                    }
+                  }
+                  
+                }}
               />
-
             </>
           )
-        })}
+        }
+        )
+        }
+        {console.log("GraphData",graphData , "Categories",categories)}
+        {}
         {/* <button onClick={getdata} className="graph-button">Update Series</button> */}
        
       </div>
