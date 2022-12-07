@@ -1,7 +1,7 @@
-export const dummy_data = {
-    "1": 0.6868677899878946,
-    "2": 0.6048378856479982,
-    "3": {
+export const dummy_data = [
+    {"1": 0.6868677899878946},
+    {"2": 0.6048378856479982},
+    {
       "Voluntary": 0.03672387702565441,
       "Entry-level": 0.19217313908799902,
       "Associate/Experienced": 0.20727994412717526,
@@ -10,7 +10,7 @@ export const dummy_data = {
       "Executive/Museum Leadership": 0.1876218800473262,
       "Prefer not to answer": 0.035198513754716665
     },
-    "4": {
+    {
       "Full-time/ Permanent employee": 0.04879232293135123,
       "Part-time employee": 0.007086641328685218,
       "Temporary employee": 0.21005492606041226,
@@ -20,7 +20,7 @@ export const dummy_data = {
       "Apprentice / Fellow": 0.07317590098389934,
       "Prefer not to answer": 0.19286294902309734
     },
-    "5": {
+    {
       "Administration": 0.0054369726452393454,
       "Conservation": 0.0440107592771772,
       "Collections Information and Management": 0.0402134184814923,
@@ -51,27 +51,27 @@ export const dummy_data = {
       "Visitor Services": 0.037704455236562864,
       "None of the above": 0.044429784992121295
     },
-    "6": {
+    {
       "Yes, I am a union member for my museum job": 0.22739437700148799,
       "No, I have the option to be a union member for my museum job but have not chosen to join": 0.27384890050433847,
       "No, a union is not available for my museum job": 0.4987567224941735
     },
-    "7": {
+    {
       "Annual salary": 0.1784418737751358,
       "Hourly wage": 0.22618842162726258,
       "Stipend": 0.5765286458954868,
       "This is a voluntary (unpaid) position": 0.01884105870211478
     },
-    "8": 0.756547,
-    "9": {
+    {"8": 0.756547},
+    {
       "Above others": 0.15120245616471534,
       "About the same as others": 0.07855292062010158,
       "Below others": 0.4646994032655267,
       "N/A, there aren't others in my institution with similar position level": 0.3055452199496564
     },
-    "10": {
+    {
       "Above others": 0.3090620193432036,
       "About the same as others": 0.3044158225185996,
       "Below others": 0.3865221581381968
     }
-  }
+]
