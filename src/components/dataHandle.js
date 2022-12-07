@@ -5,7 +5,8 @@ export const objectData = (data,graphData,categories) => {
         {
         //   console.log(data[newArray[j]])
            graphData.push(data[newArray[j]]);
-           typeof newArray[j] === Number ? categories.push("Question "+ newArray[j]) :
+           console.log(typeof newArray[j])
+           typeof newArray[j] === "string" ? categories.push("Question "+ newArray[j]) :
            categories.push(newArray[j]);
         }
 }

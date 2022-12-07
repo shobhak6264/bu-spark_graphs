@@ -45,7 +45,10 @@ export const LineChart = () => {
                <HighchartsReact
                 highcharts={Highcharts}
                 options={{
-                  title: {text : "Museums Go Forward"},
+                  chart: {
+                    type: 'line'
+                },
+                  title: {text : "Question"+"  "+(index+1)},
                   xAxis: {
                     categories: categories,
                   },
@@ -62,8 +65,7 @@ export const LineChart = () => {
                         }
                       }
                     }
-                  }
-                  
+                  },
                 }}
               />
             </>
