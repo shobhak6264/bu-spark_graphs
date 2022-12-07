@@ -8,6 +8,12 @@ import { objectData , arrayData } from './dataHandle';
 export const LineChart = () => {
   let graphData = [];
   let categories = [];
+<<<<<<< HEAD
+=======
+  let k=1;
+  generateData(dummy_data,categories,graphData);
+  k++;
+>>>>>>> 967e8b1dcf62e3e99e794121622ef8403b123fb1
   // renderGraphs(dummy_data,categories,graphData)
   // console.log("categories",categories,"GraphData",graphData);
   // const [chartOptions, setChartOptions] = useState({
