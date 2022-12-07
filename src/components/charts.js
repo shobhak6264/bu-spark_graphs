@@ -9,7 +9,7 @@ export const LineChart = () => {
   let graphData = [];
   let categories = [];
   let k=1;
-  generateData(dummy_data,categories,graphData,k);
+  generateData(dummy_data,categories,graphData);
   k++;
   // renderGraphs(dummy_data,categories,graphData)
   console.log("categories",categories,"GraphData",graphData);
