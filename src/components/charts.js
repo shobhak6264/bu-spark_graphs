@@ -8,6 +8,7 @@ import { objectData , arrayData } from './dataHandle';
 export const LineChart = () => {
   let graphData = [];
   let categories = [];
+  const [graphType,setgraphType] = useState("line");
   // renderGraphs(dummy_data,categories,graphData)
   // console.log("categories",categories,"GraphData",graphData);
   // const [chartOptions, setChartOptions] = useState({
@@ -33,14 +34,18 @@ export const LineChart = () => {
   // });
   return (
     <div class="container">
-      <h1 className="header">DATA VISUALIZATION</h1>
+      <div className="header-main">
+      <h1 className="header">Museums Moving Forward</h1>
+      </div>
        <div className="graph-display">
        {dummy_data.map((data, index) => {
          graphData=[];categories=[];
-         typeof data === 'object' ? objectData(data,graphData,categories) : arrayData(data,graphData,categories,index)
+         typeof data === 'object' ? objectData(data,graphData,categories,setgraphType) : arrayData(data,graphData,categories,index,setgraphType)
          console.log("GraphData",graphData , "Categories",categories) 
          //  generateData(dummy_data,categories,graphData,setChartOptions);
-          return (
+
+
+         return (
             <>
                <HighchartsReact
                 highcharts={Highcharts}

@@ -11,9 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.header-main{
+  background-color: rgb(255,69,68);
+  height: 100px;
+}
 .header{
   text-align: center;
+  padding:32px
 }
 .graph-display{
   display:flex;
